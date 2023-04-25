@@ -4,6 +4,11 @@ argo-cd:
   server:
     extraArgs:
       - --insecure
+    args:
+      statusProcessors: "20"
+      operation-processors: "50"
+      repo-server-timeout-seconds: "180"
+      app-resync: "600"
     config:
       repositories: |
         - type: helm
